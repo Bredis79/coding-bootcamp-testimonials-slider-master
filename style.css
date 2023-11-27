@@ -1,0 +1,169 @@
+/*** RESET ***/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html {
+    color-scheme: dark light;
+}
+
+body {
+    min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/*** main css ***/
+
+:root {
+    --clr--Dark-Blue: hsl(240, 38%, 20%);
+    --clr--Grayish-Blue: hsl(240, 18%, 77%);
+    --ff--inter: 'Inter', sans-serif;
+    --fw--300: 300;
+    --fw--500: 500;
+    --fw--700: 700;
+}
+
+body {
+    font-family: var(--ff--inter);
+    font-size: 2rem;
+    color: var(--clr--Dark-Blue);
+}
+
+.main {
+    _border: 1px solid red;
+    width: 100%;
+    max-width: 90rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background: url("./images/pattern-quotes.svg") left 19.5% top 29.5% no-repeat,
+        url("./images/pattern-curve.svg") left bottom no-repeat,
+        url("./images/pattern-bg.svg") right 74px bottom 89px no-repeat;
+    margin: 0 auto;
+}
+
+.first-person-text {
+    display: block;
+    width: 88.5%;
+    padding: 5em;
+    background: url("./images/image-tanya.jpg") right bottom 31px no-repeat;
+}
+
+.second-person-text {
+    display: none;
+    width: 88.5%;
+    padding: 5em;
+    _margin-left: 11.4em;
+    background: url("./images/image-john.jpg") right bottom 31px no-repeat;
+}
+
+.first-person-text p {
+    width: 69%;
+    font-size: 2.02rem;
+    font-weight: var(--fw--300);
+}
+
+.second-person-text p {
+    width: 66.9%;
+    font-size: 2.02rem;
+    font-weight: var(--fw--300);
+}
+
+.person-info {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1em;
+}
+
+.person-info p {
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    font-weight: var(--fw--700);
+    font-size: 1.3rem;
+
+}
+
+.person-info p:last-of-type {
+    font-weight: var(--fw--500);
+    color: var(--clr--Grayish-Blue);
+}
+
+.arrows {
+    flex: none;
+    background-color: white;
+    width: 8%;
+    border-radius: 30px;
+    display: flex;
+    padding: 0.4em 0.5em;
+    justify-content: space-between;
+    top: 50%;
+    margin-top: 35.5%;
+    margin-left: -33.3%;
+    position: relative;
+}
+
+.arrows::after {
+    box-shadow: -58px 1px 97px 3px var(--clr--Dark-Blue);
+    content: "";
+    height: 50%;
+    position: absolute;
+    top: -3px;
+    width: 245%;
+    z-index: -10;
+}
+
+
+.arrow__prev,
+.arrow__next {
+    background-color: #fff;
+    border: none;
+    padding: 5px;
+}
+
+.arrow__prev:hover,
+.arrow__next:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: 0.4s;
+}
+
+.toggle-visible {
+    display: block;
+}
+
+.toggle-hidden {
+    display: none;
+}
+
+
+
+.footer {
+    margin-top: -1em;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
